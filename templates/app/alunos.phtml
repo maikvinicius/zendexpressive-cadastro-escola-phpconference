@@ -1,0 +1,26 @@
+<h1>Cadastro de ALunos</h1>
+<a href="<?=$this->e($editLink)?>">Incluir aluno</a>
+<table>
+	<thead>
+		<tr>
+			<th>Matrícula</th>
+			<th>Nome</th>
+		</tr>
+	</thead>
+	<tbody>
+        <?php foreach ($alunos as $aluno) : ?>
+        <tr>
+        	<td>
+                <?=$aluno['matricula']?>
+            </td>
+        	<td>
+                <?=$aluno['nome']?>
+            </td>
+            <td><a href="<?=$this->e($editLink) .'/' . $aluno['matricula']?>">E</a></td>
+            <td><a href="<?=$this->e($deleteLink). '/' . $aluno['matricula']?>">X</a></td>
+        </tr>
+        <?php
+        endforeach;
+        ?>
+    </tbody>
+</table>

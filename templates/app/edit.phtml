@@ -1,0 +1,9 @@
+<h1>Cadastro de Aluno</h1>
+<form action="<?=$this->e($saveLink)?>" method="post">
+	<label for="nome">Nome</label> 
+	<input type="text" name="nome" value="<?=$aluno['nome']?>" autofocus="autofocus">		
+	<input type="hidden" name="matricula" value="<?=$aluno['matricula']?>" > 
+	<input type="submit" value="gravar">
+	
+</form>
+<a href="<?=$this->e($returnLink)?>">Voltar</a>
